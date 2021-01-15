@@ -1,4 +1,4 @@
-package az.project;
+package az.project.l04_all;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
