@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>	
+
+	<Properties>
+		<Property name = "path">D:\TEST\</Property>
+	</Properties>	
+	
+	
+	<Appenders>
+		<RollingFile name = "Rolling" filename = "${path}Rolling.log" filePattern = "${path}Rolling-%d{yyyy-MM-dd-HH-mm-ss}-%i.log">
+			<PatternLayout pattern="%d{ISO601} [%t] {%F:%L} %-5level %logger{36} - %msg%n"/>
+			<Policies>
+				<SizeBasedTriggeringPolicy size = "3 KB"/>
+			</Policies>
+			<DefaultRolloverStrategy max = "200"></DefaultRolloverStrategy>
+		</RollingFile>
+		
+    	<Console name="Console" target="SYSTEM_OUT">
+      		<PatternLayout pattern="%d{ISO601} [%t] {%F:%L} %-5level %logger{36} - %msg%n"/>
+    	</Console>
+	
+    	<File name="File" filename="${path}File.log">
+      		<PatternLayout pattern="%d{ISO601} [%t] {%F:%L} %-5level %logger{36} - %msg%n"/>
+    	</File>
+  	</Appenders>
+  
+  	<Loggers>
+  		<Logger name = "az.project" level = "INFO" additivity="false">
+  			<AppenderRef  ref="Rolling"/>
+  			<AppenderRef  ref="Console"/>
+  			<AppenderRef  ref="File"/>
+  		</Logger>
+  	</Loggers>
+  
+</Configuration>
