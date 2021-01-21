@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>log4j-lesson</groupId>
-  <artifactId>04.LOG4J.05.All</artifactId>
+  <groupId>eh-lesson</groupId>
+  <artifactId>04.LOG4J.LESSON</artifactId>
   <version>1.0</version>
   
 	<properties>
